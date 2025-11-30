@@ -4,7 +4,7 @@
   "description": "POS 개발환경을 학습하기 위한 시뮬레이션",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "package/*"
   ],
   "scripts": {
     "build:all": "npm run build --workspaces"
