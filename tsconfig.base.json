@@ -5,6 +5,12 @@
     "esModuleInterop": true,
     "strict": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@posprac/shared": ["packages/shared/src/index.ts"],
+      "@posprac/sdk": ["packages/sdk/src/index.ts"],
+      "@posprac/*": ["packages/*/src/index.ts"]
+    }
   }
 }
