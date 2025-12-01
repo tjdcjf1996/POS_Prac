@@ -6,9 +6,11 @@ import { VirtualPrinter } from '../hardware/virtualPrinter';
 import { PaymentHandler } from './handlers/PaymentHandler';
 import { PrintHandler } from './handlers/PrintHandler';
 import { OrderHandler } from './handlers/OrderHandler';
+import { PrintViewer } from './PrintViewer';
 
 export class CommandWorker {
-  private printer = new VirtualPrinter();
+  private printViewer = new PrintViewer(9090);
+  private printer = new VirtualPrinter(this.printViewer);
   private reader = new VirtualCardReader();
 
   // 처리 현황 플래그
