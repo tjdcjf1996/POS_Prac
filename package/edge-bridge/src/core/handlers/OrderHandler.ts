@@ -14,7 +14,7 @@ export class OrderHandler implements IHandler {
     // 오더 처리 로직 구현 (임시로 콘솔 로그 출력)
     console.log(`Starting Order processing : ${cmd.id}`);
 
-    const printText = `Order Received:\n Menu: ${menu}\n Price: $${price}\n`;
+    const printText = `Order Received:\n Menu: ${menu}\n Price: ${price} Won\n`;
 
     // 성공 응답 브로드캐스트
     this.sdkServer.broadcast({
