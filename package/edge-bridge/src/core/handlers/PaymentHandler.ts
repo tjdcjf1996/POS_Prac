@@ -17,7 +17,7 @@ export class PaymentHandler implements IHandler {
     this.sdkServer.broadcast({
       requestId: cmd.id,
       success: true,
-      data: { cardData },
+      data: { ...cardData },
     });
   }
 }
