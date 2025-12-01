@@ -53,6 +53,8 @@ export class SocketClient extends EventEmitter {
 
             // 펜딩 맵에서 제거
             this.pendingRequests.delete(message.requestId);
+          } else if (message.type) {
+            this.emit(message.type, message.payload);
           }
         } catch (error) {
           console.error('SDK parse Error:', error);
