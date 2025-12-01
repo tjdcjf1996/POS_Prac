@@ -1,0 +1,58 @@
+body {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  font-family: sans-serif;
+}
+.printer-device {
+  background: #ddd;
+  padding: 20px;
+  border-radius: 20px;
+  width: 320px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border-top: 10px solid #222;
+}
+.paper-slot {
+  background: #fff;
+  padding: 15px;
+  min-height: 400px;
+  max-height: 600px;
+  overflow-y: auto;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  white-space: pre-wrap;
+}
+.status-led {
+  width: 10px;
+  height: 10px;
+  background: #0f0;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+  box-shadow: 0 0 5px #0f0;
+}
+h3 {
+  margin: 0 0 10px 0;
+  color: #444;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+.receipt-item {
+  margin-bottom: 20px;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 10px;
+  animation: print 0.5s ease-out;
+}
+@keyframes print {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
