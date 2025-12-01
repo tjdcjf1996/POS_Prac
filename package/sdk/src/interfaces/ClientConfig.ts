@@ -1,4 +1,4 @@
-import { PosClientType } from '@posprac/shared';
+import type { PosClientType } from '@posprac/shared';
 
 export interface ClientConfig {
   url: string;
