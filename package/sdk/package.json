@@ -7,7 +7,11 @@
     "build": "tsc"
   },
   "dependencies": {
-    "@posprac/shared": "*"
+    "@posprac/shared": "*",
+    "events": "^3.3.0",
+    "isomorphic-ws": "^5.0.0",
+    "uuid": "^13.0.0",
+    "ws": "^8.18.3"
   },
   "devDependencies": {
     "ts-node": "^10.9.2",
