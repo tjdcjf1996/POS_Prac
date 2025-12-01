@@ -1,3 +1,5 @@
+import { PaymentResult } from "@posprac/shared";
+
 export interface IPrinter {
   connect(): Promise<void>;
   print(text: string): Promise<void>;
@@ -5,6 +7,6 @@ export interface IPrinter {
 
 export interface ICardReader {
   connect(): Promise<void>;
-  readCard(): Promise<string>;
+  readCard(): Promise<PaymentResult>;
   cancel(): void;
 }
