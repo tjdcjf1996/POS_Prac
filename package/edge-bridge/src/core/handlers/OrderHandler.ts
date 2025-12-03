@@ -17,11 +17,14 @@ export class OrderHandler implements IHandler {
     const printText = `Order Received:\n Menu: ${menu}\n Price: ${price} Won\n`;
 
     // 성공 응답 브로드캐스트
-    this.sdkServer.broadcast({
-      type: 'ORDER_INCOMING',
-      success: true,
-      payload: cmd.payload,
-    });
+    this.sdkServer.broadcast(
+      {
+        type: 'ORDER_INCOMING',
+        success: true,
+        payload: cmd.payload,
+      },
+      'MAIN',
+    );
 
     // 프린트 출력
     await this.printer.print(printText);
