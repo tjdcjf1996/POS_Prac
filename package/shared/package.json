@@ -1,13 +1,23 @@
 {
   "name": "@posprac/shared",
   "version": "1.0.0",
-  "main": "dist/index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    "require": "./dist/cjs/index.js",
+    "import": "./dist/esm/index.js"
+  },
   "scripts": {
-    "build": "tsc"
+    "build:shared:cjs": "tsc -p ./tsconfig.cjs.json",
+    "build:shared:esm": "tsc -p ./tsconfig.esm.json",
+    "build": "npm run build:shared:cjs && npm run build:shared:esm"
   },
   "devDependencies": {
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "zod": "^4.1.13"
   }
 }
