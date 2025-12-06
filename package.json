@@ -7,7 +7,11 @@
     "package/*"
   ],
   "scripts": {
-    "build:all": "npm run build --workspaces"
+    "build:all": "npm run build --workspaces",
+    "dev:delivery": "npm run dev --workspace=@posprac/delivery-server",
+    "dev:edge": "npm run dev --workspace=@posprac/edge-bridge",
+    "dev:client": "npm run dev --workspace=@posprac/client",
+    "dev:pos": "npm run dev --workspace=@posprac/pos-main"
   },
   "devDependencies": {
     "ts-node": "^10.9.2",
